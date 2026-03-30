@@ -200,9 +200,9 @@ def creer_ecran_confirmation():
     tk.Button(frame, text="Retour au menu",
               command=lambda: afficher_frame("menu")).pack()
 
-# ============================================================
-# =====================  VENTE PRODUIT  =======================
-# ============================================================
+
+#  VENTE PRODUIT  
+
 
 def creer_ecran_vente_code():
     frame = tk.Frame(root, bg=color, width=400, height=500)
@@ -268,9 +268,9 @@ def creer_ecran_vente_confirmation():
     tk.Button(frame, text="Retour au menu",
               command=lambda: afficher_frame("menu")).pack()
 
-# ============================================================
+
 # =====================  VOIR LE STOCK  =======================
-# ============================================================
+
 
 def creer_ecran_stock():
     frame = tk.Frame(root, bg=color, width=400, height=500)
@@ -295,9 +295,8 @@ def creer_ecran_stock():
 
     frame.bind("<Visibility>", rafraichir)
 
-# ============================================================
 # =====================  VOIR LE PRIX  ========================
-# ============================================================
+
 
 def creer_ecran_prix_code():
     frame = tk.Frame(root, bg=color, width=400, height=500)
@@ -348,9 +347,9 @@ def creer_ecran_prix_affichage():
 
     frame.bind("<Visibility>", rafraichir)
 
-# -------------------------
+
 # Initialisation
-# -------------------------
+
 nouveau_produit = {}
 vente_produit = {}
 prix_produit = {}
