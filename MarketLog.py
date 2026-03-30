@@ -3,17 +3,13 @@ import tkinter as tk
 from PIL import Image, ImageTk
 import csv
 
-# -------------------------
-# Fonction pour PyInstaller
-# -------------------------
+
 def resource_path(relative_path):
     if hasattr(sys, '_MEIPASS'):
         return os.path.join(sys._MEIPASS, relative_path)
     return os.path.join(os.path.abspath("."), relative_path)
 
-# -------------------------
-# Données (valeurs par défaut si pas de CSV)
-# -------------------------
+
 produits = [
     {"code": "AV26022026", "nom": "AVOCAT", "prix": 1500, "stock": 350},
     {"code": "MG13052003", "nom": "MANGUE", "prix": 500, "stock": 433},
@@ -22,9 +18,7 @@ produits = [
     {"code": "OR24041972", "nom": "ORANGE", "prix": 650, "stock": 212},
 ]
 
-# -------------------------
-# Gestion CSV
-# -------------------------
+
 def charger_produits():
     if not os.path.exists("produits.csv"):
         sauvegarder_produits()
@@ -49,16 +43,16 @@ def sauvegarder_produits():
         for p in produits:
             writer.writerow(p)
 
-# -------------------------
+
 # Application
-# -------------------------
+
 root = tk.Tk()
 root.title("MarketLog")
 root.geometry("800x600")
 
-# -------------------------
-# Image de fond
-# -------------------------
+
+# background
+
 img = Image.open(resource_path("Background.jpg"))
 bg = ImageTk.PhotoImage(img)
 
@@ -67,9 +61,7 @@ canvas.pack(fill="both", expand=True)
 canvas.create_image(0, 0, image=bg, anchor="nw")
 
 color = "#A7D3E8"
-# -------------------------
-# Gestion des écrans
-# -------------------------
+
 frames = {}
 
 def afficher_frame(nom):
