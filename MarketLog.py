@@ -70,9 +70,9 @@ def afficher_frame(nom):
         f.place_forget()
     frames[nom].place(x=50, y=400)
 
-# -------------------------
+
 # Menu principal
-# -------------------------
+-
 def creer_menu_principal():
     frame = tk.Frame(root, bg=color, width=400, height=500)
     frames["menu"] = frame
@@ -95,9 +95,9 @@ def creer_menu_principal():
     tk.Button(frame, text="5. Quitter", font=("Arial", 12),
               command=root.quit).pack(pady=5)
 
-# -------------------------
+
 # Ajout produit : Code
-# -------------------------
+
 def creer_ecran_code():
     frame = tk.Frame(root, bg=color, width=400, height=500)
     frames["ajout_code"] = frame
@@ -118,9 +118,8 @@ def creer_ecran_code():
     tk.Button(frame, text="Valider", command=valider).pack(pady=20)
     tk.Button(frame, text="Retour", command=lambda: afficher_frame("menu")).pack()
 
-# -------------------------
 # Ajout produit : Nom
-# -------------------------
+
 def creer_ecran_nom():
     frame = tk.Frame(root, bg=color, width=400, height=500)
     frames["ajout_nom"] = frame
@@ -140,9 +139,9 @@ def creer_ecran_nom():
 
     tk.Button(frame, text="Valider", command=valider).pack(pady=20)
 
-# -------------------------
+
 # Ajout produit : Prix
-# -------------------------
+
 def creer_ecran_prix():
     frame = tk.Frame(root, bg=color, width=400, height=500)
     frames["ajout_prix"] = frame
@@ -163,9 +162,9 @@ def creer_ecran_prix():
 
     tk.Button(frame, text="Valider", command=valider).pack(pady=20)
 
-# -------------------------
+
 # Ajout produit : Stock
-# -------------------------
+
 def creer_ecran_stock_ajout():
     frame = tk.Frame(root, bg=color, width=400, height=500)
     frames["ajout_stock"] = frame
@@ -188,9 +187,9 @@ def creer_ecran_stock_ajout():
 
     tk.Button(frame, text="Valider", command=valider).pack(pady=20)
 
-# -------------------------
+
 # Ajout produit : Confirmation
-# -------------------------
+
 def creer_ecran_confirmation():
     frame = tk.Frame(root, bg=color, width=400, height=500)
     frames["confirmation"] = frame
